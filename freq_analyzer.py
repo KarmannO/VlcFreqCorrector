@@ -3,6 +3,8 @@ import numpy as np
 class FreqAnalyzer:
     def __init__(self):
         self.img = None
+        self.mask = None
+        self.mw = self.mh = 0
         self.iw = self.ih = 0
         self.fr_data = []
         self.fr_w = []
@@ -87,7 +89,12 @@ class FreqAnalyzer:
             self.apl[i] /= float(self.fr_w[i] * self.fr_h[i])
 
     def CalculateMaskedAmplitudes(self):
+        mask_buf = np.zeros(self.fr_w[0] * self.fr_h[0])
+        mask_reduced = np.zeros(self.fr_w[0] // 2 * self.fr_h[0] // 2)
         
+
+
+
 
 
 
